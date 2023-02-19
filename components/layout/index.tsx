@@ -25,7 +25,6 @@ export default function Layout({
   const { data: session, status } = useSession();
   const { SignInModal, setShowSignInModal } = useSignInModal();
   const scrolled = useScroll(50);
-
   return (
     <>
       <Meta {...meta} />
@@ -50,7 +49,7 @@ export default function Layout({
             <p>PiggyBucks</p>
           </Link>
           
-          <Link href="/about" className="flex items-center font-display text-2xl">
+          <Link href="/abo" className="flex items-center font-display text-2xl">
               <p>About Us</p>
           </Link>
           
