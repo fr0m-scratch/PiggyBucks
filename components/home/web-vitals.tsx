@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import CountingNumbers from "@/components/shared/counting-numbers";
+import internal from "stream";
 
-export default function WebVitals() {
+export default function WebVitals(
+  {
+    vCount =100,
+  }: {
+    vCount: number;
+  }
+) {
+
   return (
     <div className="relative h-full w-full">
       <motion.svg
@@ -23,14 +31,14 @@ export default function WebVitals() {
           cx="50"
           cy="50"
           r="45"
-          fill="#DCFCE7"
-          stroke="#22C55E"
+          fill="black"
+          stroke="#7700C8"
         />
       </motion.svg>
       <CountingNumbers
-        value={100}
+        value= {vCount}
         duration={2500}
-        className="absolute inset-0 mx-auto flex items-center justify-center font-display text-5xl text-green-500"
+        className="absolute inset-0 mx-auto flex items-center justify-center font-display text-5xl text-yellow-300"
       />
     </div>
   );

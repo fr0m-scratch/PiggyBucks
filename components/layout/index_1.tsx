@@ -11,7 +11,7 @@ import UserDropdown from "./user-dropdown";
 
 
 
-export default function Layout({
+export default function Layout_1({
   meta,
   children,
 }: {
@@ -56,21 +56,8 @@ export default function Layout({
           <Link href="/" className="flex items-center font-display text-2xl">
               <p>Contact Us</p>
           </Link>
-          <div>
-            <AnimatePresence>
-              {!session && status !== "loading" ? (
-                <motion.button 
-                  className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-                  onClick={() => setShowSignInModal(true)}
-                  {...FADE_IN_ANIMATION_SETTINGS}
-                >
-                  Sign In
-                </motion.button>
-              ) : (
-                <UserDropdown />
-              )}
-            </AnimatePresence>
-          </div>
+          
+          
         </div>
       </div>
       <main className="flex w-full flex-col items-center justify-center py-32">
